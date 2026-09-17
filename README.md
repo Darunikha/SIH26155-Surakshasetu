@@ -148,7 +148,7 @@ one.
 ## Easy setup
 
 The absolute minimum to get the app running, with no explanation — see
-[Quick start](#quick-start-5-minutes-judges-start-here) below for what each step does.
+[Quick start](#quick-start) below for what each step does.
 
 ```bash
 # Terminal 1
@@ -170,7 +170,7 @@ npm run dev
 Open **http://localhost:3000** and register an account. That's it — AI and blockchain
 are optional add-ons, not required to use the app.
 
-## Quick start (~5 minutes, judges start here)
+## Quick start
 
 This gets the dashboard running with real compliance/risk/attack-graph/ACO/reporting —
 everything except AI explanations and blockchain provenance, which are additive layers
