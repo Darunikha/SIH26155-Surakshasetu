@@ -145,6 +145,31 @@ one.
 - Optional: a Pinecone API key for RAG-grounded AI answers (falls back to a local
   keyword lookup against `rag/knowledge/` if omitted)
 
+## Easy setup
+
+The absolute minimum to get the app running, with no explanation — see
+[Quick start](#quick-start-5-minutes-judges-start-here) below for what each step does.
+
+```bash
+# Terminal 1
+cd backend
+python -m venv venv && ./venv/Scripts/activate
+pip install -r requirements.txt
+cp .env.example .env   # set MONGODB_URI
+uvicorn app.main:app --port 8000
+```
+
+```bash
+# Terminal 2
+cd frontend
+npm install
+cp .env.local.example .env.local
+npm run dev
+```
+
+Open **http://localhost:3000** and register an account. That's it — AI and blockchain
+are optional add-ons, not required to use the app.
+
 ## Quick start (~5 minutes, judges start here)
 
 This gets the dashboard running with real compliance/risk/attack-graph/ACO/reporting —
@@ -226,28 +251,6 @@ npm run test:e2e                  # drives a real browser through the full user
                                    # journey against the live backend and blockchain
 ```
 
-## Troubleshooting
-
-- **`No Python at 'C:\Users\<other-user>\...'` when activating `venv`** — the virtual
-  environment was created on a different machine/user account (common if you cloned a
-  repo that already had a `venv/` committed, or copied the project between machines).
-  Delete and recreate it: `rm -rf venv && python -m venv venv`, then reinstall
-  requirements.
-- **Backend code changes don't seem to take effect** — `uvicorn --reload`'s file watcher
-  has been unreliable in some Windows setups (it detects the change but the worker never
-  actually restarts). If this happens, stop the process and run `uvicorn app.main:app
-  --port 8000` again without `--reload`; restart manually after each change instead.
-- **"AI not connected" everywhere, including after installing Ollama** — confirm the
-  model is actually pulled with `ollama list`; the service name must match
-  `OLLAMA_MODEL` in `backend/.env` exactly (`qwen2.5:3b-instruct` by default).
-- **Docker isn't installed / blockchain step fails** — that's fine for evaluating
-  everything except live blockchain verification; every other page (dashboard, upload,
-  scans, risk, attack paths, optimizer, training, reports, AI assistant) works fully
-  without it.
-- **Port already in use** — another process is bound to 8000/3000/11434. Find and stop
-  it (`netstat -ano | findstr :8000` on Windows, then `taskkill /PID <pid> /F`), or run
-  the conflicting service on a different port.
-
 ## Design principles
 
 - **Nothing is fabricated.** The compliance engine is deterministic rule evaluation,
@@ -270,10 +273,6 @@ npm run test:e2e                  # drives a real browser through the full user
 
 ## Known limitations
 
-- There is no team/organization concept — each project has a single owner. Non-admin
-  users only see projects they own (`app/auth/access.py`); admins see everything. This
-  was a real gap found and fixed during end-to-end testing — see
-  `tests/test_project_access.py`.
 - The ACO optimizer, compliance engine, and risk engine cover the control set
   documented in `app/compliance/controls/` — a representative baseline, not the full
   CIS/NIST/ISO catalogs (those run to hundreds/thousands of controls).
