@@ -1,0 +1,43 @@
+# --- Secrets ---
+.env
+.env.local
+*.pem
+*.key
+backend/storage/uploads/**
+
+# --- Python ---
+backend/venv/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Node / Next.js ---
+node_modules/
+frontend/.next/
+frontend/out/
+blockchain/gateway-service/node_modules/
+blockchain/gateway-service/dist/
+blockchain/chaincode/*/node_modules/
+npm-debug.log*
+
+# --- Hyperledger Fabric (generated crypto material must never be committed) ---
+blockchain/network/crypto-config/
+blockchain/network/channel-artifacts/
+blockchain/network/organizations/
+blockchain/network/*.tar.gz
+
+# --- ML ---
+ml/datasets/**/*.jsonl
+ml/checkpoints/
+ml/runs/
+
+# --- Reports / generated artifacts ---
+backend/storage/reports/*.pdf
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

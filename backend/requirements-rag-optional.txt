@@ -1,0 +1,5 @@
+# Optional local embedding model for RAG.
+# If this package/model is not installed, backend/app/rag/embedder.py automatically
+# falls back to a deterministic local hashing-vector embedder so the RAG pipeline
+# remains fully functional offline. Install this for production-quality embeddings.
+sentence-transformers==3.3.1

@@ -1,0 +1,13 @@
+# QLoRA fine-tuning pipeline dependencies.
+# NOTE: not installed/executed during initial build (spec section 40-41) --
+# requires a GPU and a multi-hour run. Install this when you're ready to train
+# on your own dataset placed under ml/datasets/<category>/*.jsonl.
+torch==2.5.1
+transformers==4.47.1
+peft==0.14.0
+trl==0.13.0
+bitsandbytes==0.45.0; sys_platform != "win32"
+accelerate==1.2.1
+datasets==3.2.0
+evaluate==0.4.3
+scikit-learn==1.6.0

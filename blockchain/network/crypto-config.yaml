@@ -1,0 +1,15 @@
+OrdererOrgs:
+  - Name: OrdererOrg
+    Domain: securityaudit.com
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: orderer
+
+PeerOrgs:
+  - Name: Org1
+    Domain: org1.securityaudit.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+    Users:
+      Count: 1

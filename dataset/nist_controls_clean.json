@@ -1,0 +1,150 @@
+{
+  "ac-2": {
+    "title": "Account Management",
+    "statement": "Define and document the types of accounts allowed and specifically prohibited for use within the system; Assign account managers; Require [organization-defined parameters] for group and role membership; Specify: Authorized users of the system; Group and role membership; and Access authorizations (i.e., privileges) and [organization-defined parameters] for each account; Require approvals by [organization-defined parameters] for requests to create accounts; Create, enable, modify, disable, and remove accounts in accordance with [organization-defined parameters]; Monitor the use of accounts; Notify account managers and [organization-defined parameters] within: [organization-defined parameters] when accounts are no longer required; [organization-defined parameters] when users are terminated or transferred; and [organization-defined parameters] when system usage or need-to-know changes for an individual; Authorize access to the system based on: A valid access authorization; Intended system usage; and [organization-defined parameters]; Review accounts for compliance with account management requirements [organization-defined parameters]; Establish and implement a process for changing shared or group account authenticators (if deployed) when individuals are removed from the group; and Align account management processes with personnel termination and transfer processes."
+  },
+  "ac-3": {
+    "title": "Access Enforcement",
+    "statement": "Enforce approved authorizations for logical access to information and system resources in accordance with applicable access control policies."
+  },
+  "ac-4": {
+    "title": "Information Flow Enforcement",
+    "statement": "Enforce approved authorizations for controlling the flow of information within the system and between connected systems based on [organization-defined parameters]."
+  },
+  "ac-6": {
+    "title": "Least Privilege",
+    "statement": "Employ the principle of least privilege, allowing only authorized accesses for users (or processes acting on behalf of users) that are necessary to accomplish assigned organizational tasks."
+  },
+  "ac-7": {
+    "title": "Unsuccessful Logon Attempts",
+    "statement": "Enforce a limit of [organization-defined parameters] consecutive invalid logon attempts by a user during a [organization-defined parameters] ; and Automatically [organization-defined parameters] when the maximum number of unsuccessful attempts is exceeded."
+  },
+  "ac-8": {
+    "title": "System Use Notification",
+    "statement": "Display [organization-defined parameters] to users before granting access to the system that provides privacy and security notices consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines and state that: Users are accessing a U.S. Government system; System usage may be monitored, recorded, and subject to audit; Unauthorized use of the system is prohibited and subject to criminal and civil penalties; and Use of the system indicates consent to monitoring and recording; Retain the notification message or banner on the screen until users acknowledge the usage conditions and take explicit actions to log on to or further access the system; and For publicly accessible systems: Display system use information [organization-defined parameters] , before granting further access to the publicly accessible system; Display references, if any, to monitoring, recording, or auditing that are consistent with privacy accommodations for such systems that generally prohibit those activities; and Include a description of the authorized uses of the system."
+  },
+  "ac-10": {
+    "title": "Concurrent Session Control",
+    "statement": "Limit the number of concurrent sessions for each [organization-defined parameters] to [organization-defined parameters]."
+  },
+  "ac-17": {
+    "title": "Remote Access",
+    "statement": "Establish and document usage restrictions, configuration/connection requirements, and implementation guidance for each type of remote access allowed; and Authorize each type of remote access to the system prior to allowing such connections."
+  },
+  "au-2": {
+    "title": "Event Logging",
+    "statement": "Identify the types of events that the system is capable of logging in support of the audit function: [organization-defined parameters]; Coordinate the event logging function with other organizational entities requiring audit-related information to guide and inform the selection criteria for events to be logged; Specify the following event types for logging within the system: [organization-defined parameters]; Provide a rationale for why the event types selected for logging are deemed to be adequate to support after-the-fact investigations of incidents; and Review and update the event types selected for logging [organization-defined parameters]."
+  },
+  "au-3": {
+    "title": "Content of Audit Records",
+    "statement": "Ensure that audit records contain information that establishes the following: What type of event occurred; When the event occurred; Where the event occurred; Source of the event; Outcome of the event; and Identity of any individuals, subjects, or objects/entities associated with the event."
+  },
+  "au-4": {
+    "title": "Audit Log Storage Capacity",
+    "statement": "Allocate audit log storage capacity to accommodate [organization-defined parameters]."
+  },
+  "au-5": {
+    "title": "Response to Audit Logging Process Failures",
+    "statement": "Alert [organization-defined parameters] within [organization-defined parameters] in the event of an audit logging process failure; and Take the following additional actions: [organization-defined parameters]."
+  },
+  "au-8": {
+    "title": "Time Stamps",
+    "statement": "Use internal system clocks to generate time stamps for audit records; and Record time stamps for audit records that meet [organization-defined parameters] and that use Coordinated Universal Time, have a fixed local time offset from Coordinated Universal Time, or that include the local time offset as part of the time stamp."
+  },
+  "au-9": {
+    "title": "Protection of Audit Information",
+    "statement": "Protect audit information and audit logging tools from unauthorized access, modification, and deletion; and Alert [organization-defined parameters] upon detection of unauthorized access, modification, or deletion of audit information."
+  },
+  "au-10": {
+    "title": "Non-repudiation",
+    "statement": "Provide irrefutable evidence that an individual (or process acting on behalf of an individual) has performed [organization-defined parameters]."
+  },
+  "au-12": {
+    "title": "Audit Record Generation",
+    "statement": "Provide audit record generation capability for the event types the system is capable of auditing as defined in [AU-2a](#au-2_smt.a) on [organization-defined parameters]; Allow [organization-defined parameters] to select the event types that are to be logged by specific components of the system; and Generate audit records for the event types defined in [AU-2c](#au-2_smt.c) that include the audit record content defined in [AU-3](#au-3)."
+  },
+  "cm-3": {
+    "title": "Configuration Change Control",
+    "statement": "Determine and document the types of changes to the system that are configuration-controlled; Review proposed configuration-controlled changes to the system and approve or disapprove such changes with explicit consideration for security and privacy impact analyses; Document configuration change decisions associated with the system; Implement approved configuration-controlled changes to the system; Retain records of configuration-controlled changes to the system for [organization-defined parameters]; Monitor and review activities associated with configuration-controlled changes to the system; and Coordinate and provide oversight for configuration change control activities through [organization-defined parameters] that convenes [organization-defined parameters]."
+  },
+  "cm-5": {
+    "title": "Access Restrictions for Change",
+    "statement": "Define, document, approve, and enforce physical and logical access restrictions associated with changes to the system."
+  },
+  "cm-6": {
+    "title": "Configuration Settings",
+    "statement": "Establish and document configuration settings for components employed within the system that reflect the most restrictive mode consistent with operational requirements using [organization-defined parameters]; Implement the configuration settings; Identify, document, and approve any deviations from established configuration settings for [organization-defined parameters] based on [organization-defined parameters] ; and Monitor and control changes to the configuration settings in accordance with organizational policies and procedures."
+  },
+  "cm-7": {
+    "title": "Least Functionality",
+    "statement": "Configure the system to provide only [organization-defined parameters] ; and Prohibit or restrict the use of the following functions, ports, protocols, software, and/or services: [organization-defined parameters]."
+  },
+  "ia-2": {
+    "title": "Identification and Authentication (Organizational Users)",
+    "statement": "Uniquely identify and authenticate organizational users and associate that unique identification with processes acting on behalf of those users."
+  },
+  "ia-3": {
+    "title": "Device Identification and Authentication",
+    "statement": "Uniquely identify and authenticate [organization-defined parameters] before establishing a [organization-defined parameters] connection."
+  },
+  "ia-5": {
+    "title": "Authenticator Management",
+    "statement": "Manage system authenticators by: Verifying, as part of the initial authenticator distribution, the identity of the individual, group, role, service, or device receiving the authenticator; Establishing initial authenticator content for any authenticators issued by the organization; Ensuring that authenticators have sufficient strength of mechanism for their intended use; Establishing and implementing administrative procedures for initial authenticator distribution, for lost or compromised or damaged authenticators, and for revoking authenticators; Changing default authenticators prior to first use; Changing or refreshing authenticators [organization-defined parameters] or when [organization-defined parameters] occur; Protecting authenticator content from unauthorized disclosure and modification; Requiring individuals to take, and having devices implement, specific controls to protect authenticators; and Changing authenticators for group or role accounts when membership to those accounts changes."
+  },
+  "ia-7": {
+    "title": "Cryptographic Module Authentication",
+    "statement": "Implement mechanisms for authentication to a cryptographic module that meet the requirements of applicable laws, executive orders, directives, policies, regulations, standards, and guidelines for such authentication."
+  },
+  "ma-4": {
+    "title": "Nonlocal Maintenance",
+    "statement": "Approve and monitor nonlocal maintenance and diagnostic activities; Allow the use of nonlocal maintenance and diagnostic tools only as consistent with organizational policy and documented in the security plan for the system; Employ strong authentication in the establishment of nonlocal maintenance and diagnostic sessions; Maintain records for nonlocal maintenance and diagnostic activities; and Terminate session and network connections when nonlocal maintenance is completed."
+  },
+  "sc-2": {
+    "title": "Separation of System and User Functionality",
+    "statement": "Separate user functionality, including user interface services, from system management functionality."
+  },
+  "sc-3": {
+    "title": "Security Function Isolation",
+    "statement": "Isolate security functions from nonsecurity functions."
+  },
+  "sc-4": {
+    "title": "Information in Shared System Resources",
+    "statement": "Prevent unauthorized and unintended information transfer via shared system resources."
+  },
+  "sc-5": {
+    "title": "Denial-of-service Protection",
+    "statement": "[organization-defined parameters] the effects of the following types of denial-of-service events: [organization-defined parameters] ; and Employ the following controls to achieve the denial-of-service objective: [organization-defined parameters]."
+  },
+  "sc-7": {
+    "title": "Boundary Protection",
+    "statement": "Monitor and control communications at the external managed interfaces to the system and at key internal managed interfaces within the system; Implement subnetworks for publicly accessible system components that are [organization-defined parameters] separated from internal organizational networks; and Connect to external networks or systems only through managed interfaces consisting of boundary protection devices arranged in accordance with an organizational security and privacy architecture."
+  },
+  "sc-8": {
+    "title": "Transmission Confidentiality and Integrity",
+    "statement": "Protect the [organization-defined parameters] of transmitted information."
+  },
+  "sc-10": {
+    "title": "Network Disconnect",
+    "statement": "Terminate the network connection associated with a communications session at the end of the session or after [organization-defined parameters] of inactivity."
+  },
+  "sc-13": {
+    "title": "Cryptographic Protection",
+    "statement": "Determine the [organization-defined parameters] ; and Implement the following types of cryptography required for each specified cryptographic use: [organization-defined parameters]."
+  },
+  "sc-17": {
+    "title": "Public Key Infrastructure Certificates",
+    "statement": "Issue public key certificates under an [organization-defined parameters] or obtain public key certificates from an approved service provider; and Include only approved trust anchors in trust stores or certificate stores managed by the organization."
+  },
+  "sc-24": {
+    "title": "Fail in Known State",
+    "statement": "Fail to a [organization-defined parameters] for the following failures on the indicated components while preserving [organization-defined parameters] in failure: [organization-defined parameters]."
+  },
+  "sc-28": {
+    "title": "Protection of Information at Rest",
+    "statement": "Protect the [organization-defined parameters] of the following information at rest: [organization-defined parameters]."
+  },
+  "si-2": {
+    "title": "Flaw Remediation",
+    "statement": "Identify, report, and correct system flaws; Test software and firmware updates related to flaw remediation for effectiveness and potential side effects before installation; Install security-relevant software and firmware updates within [organization-defined parameters] of the release of the updates; and Incorporate flaw remediation into the organizational configuration management process."
+  }
+}

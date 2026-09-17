@@ -1,0 +1,16 @@
+{
+  "name": "security-audit-chaincode",
+  "version": "1.0.0",
+  "description": "Hyperledger Fabric chaincode for SIH26155 audit provenance (hashes only, never raw evidence).",
+  "main": "index.js",
+  "scripts": {
+    "start": "fabric-chaincode-node start"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "fabric-contract-api": "^2.5.4",
+    "fabric-shim": "^2.5.4"
+  }
+}

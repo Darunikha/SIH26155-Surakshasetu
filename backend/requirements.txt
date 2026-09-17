@@ -1,0 +1,47 @@
+# --- Web framework ---
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+pydantic==2.10.4
+pydantic[email]==2.10.4
+pydantic-settings==2.7.0
+python-multipart==0.0.20
+
+# --- Database ---
+pymongo==4.9.2
+motor==3.6.0
+
+# --- Auth / security ---
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+slowapi==0.1.9
+
+# --- File handling / validation ---
+python-magic-bin==0.4.14; sys_platform == "win32"
+python-magic==0.4.27; sys_platform != "win32"
+chardet==5.2.0
+
+# --- Graph / optimization ---
+networkx==3.4.2
+numpy==2.2.1
+
+# --- PDF reporting ---
+reportlab==4.2.5
+
+# --- Config parsing ---
+pyyaml==6.0.2
+
+# --- HTTP client (Ollama, Fabric gateway sidecar, Pinecone) ---
+httpx==0.27.2
+
+# --- Vector DB ---
+pinecone==5.4.2
+
+# --- Local LLM client (code-complete; Ollama itself is not installed this session) ---
+ollama==0.4.4
+
+# --- Testing ---
+pytest==8.3.4
+pytest-asyncio==0.25.0
+pytest-cov==6.0.0
+mongomock==4.3.0

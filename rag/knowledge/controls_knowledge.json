@@ -1,0 +1,92 @@
+[
+  {
+    "control_id": "telnet_disabled",
+    "title": "Telnet Disabled",
+    "text": "Telnet transmits all traffic, including credentials, in cleartext over the network. An attacker positioned on the network path (or performing ARP spoofing on a local segment) can passively capture administrative passwords and session content. Replace Telnet with SSH version 2 for all administrative access, and remove `transport input telnet` from VTY/console lines."
+  },
+  {
+    "control_id": "http_management_disabled",
+    "title": "HTTP Management Disabled",
+    "text": "Unencrypted HTTP management interfaces expose session cookies, credentials, and configuration data to network eavesdroppers. Disable the HTTP management service and require HTTPS (TLS) for any web-based device administration."
+  },
+  {
+    "control_id": "ssh_version_2",
+    "title": "SSH Protocol Version 2",
+    "text": "SSH protocol version 1 has known cryptographic weaknesses (weak integrity checks, vulnerability to man-in-the-middle attacks) and has been deprecated for over a decade. Configure devices to accept only SSH version 2."
+  },
+  {
+    "control_id": "management_encryption_in_use",
+    "title": "Encrypted Management Enabled",
+    "text": "Administrative sessions should always be encrypted end-to-end. Enabling HTTPS for web management and disabling plaintext protocols prevents credential and session-data interception on shared or compromised network segments."
+  },
+  {
+    "control_id": "password_policy_minimum_length",
+    "title": "Minimum Password Length",
+    "text": "Short passwords are vulnerable to brute-force and dictionary attacks. Industry baselines (CIS, NIST 800-63B) recommend a minimum length of at least 8-14 characters depending on whether other compensating controls (MFA, lockout) are present."
+  },
+  {
+    "control_id": "privileged_access_restricted",
+    "title": "Privileged Access Restricted",
+    "text": "Weak or shared privileged-access mechanisms (e.g. a single shared enable password rather than per-user accountability) make it impossible to attribute administrative actions to an individual and increase the blast radius of a single credential compromise. Use per-user authentication with a strong, hashed enable secret rather than a plaintext enable password."
+  },
+  {
+    "control_id": "mfa_enforced",
+    "title": "Multi-Factor Authentication",
+    "text": "Passwords alone are vulnerable to phishing, credential stuffing, and keylogging. Multi-factor authentication significantly reduces the risk of unauthorized administrative access even if a password is compromised, where the platform supports it."
+  },
+  {
+    "control_id": "no_default_credentials",
+    "title": "No Default Credential Indicators",
+    "text": "Default or well-known vendor credentials (e.g. admin/admin, cisco/cisco) are the first thing attackers and automated scanners try. Any configuration containing such patterns should be treated as a critical, immediately actionable finding."
+  },
+  {
+    "control_id": "logging_enabled",
+    "title": "Logging Enabled",
+    "text": "Without logging, there is no record of configuration changes, login attempts, or anomalous behavior, making incident detection and forensic investigation impossible. Device-level logging should always be enabled as a baseline control."
+  },
+  {
+    "control_id": "remote_syslog_configured",
+    "title": "Remote Syslog Configured",
+    "text": "Logs stored only locally on a device can be lost, rotated out, or deleted by an attacker who gains access. Forwarding logs to a centralized, access-controlled syslog server preserves an independent audit trail even if the device itself is later compromised."
+  },
+  {
+    "control_id": "audit_logging_enabled",
+    "title": "Audit Logging Enabled",
+    "text": "Accounting/audit logging (e.g. AAA accounting) records who performed which administrative commands and when, which is essential for accountability, compliance evidence, and post-incident review."
+  },
+  {
+    "control_id": "ntp_configured",
+    "title": "NTP Configured",
+    "text": "Without a synchronized time source, log timestamps across devices cannot be reliably correlated during an investigation, which can make reconstructing an attack timeline impossible. Configure at least one trusted NTP source."
+  },
+  {
+    "control_id": "snmp_secure",
+    "title": "Secure SNMP Configuration",
+    "text": "SNMP v1/v2c relies on community strings sent in cleartext with no real authentication, and default strings like 'public'/'private' are widely known. SNMPv3 provides authentication and encryption and should be used wherever SNMP is required."
+  },
+  {
+    "control_id": "no_unrestricted_acl_rules",
+    "title": "No Unrestricted ACL Rules",
+    "text": "An access-control rule that permits any-source to any-destination traffic effectively disables network segmentation, allowing lateral movement and negating the purpose of the control point. ACLs/firewall policies should follow least-privilege, permitting only the specific traffic that is required."
+  },
+  {
+    "control_id": "management_plane_not_internet_exposed",
+    "title": "Management Plane Not Internet-Exposed",
+    "text": "Exposing administrative interfaces (SSH, HTTP/S, Telnet) directly to the internet dramatically increases the attack surface, inviting credential-stuffing and exploit attempts from anywhere in the world. Management access should be restricted to trusted internal networks or a dedicated out-of-band management network/VPN."
+  },
+  {
+    "control_id": "no_insecure_services",
+    "title": "No Insecure Services Enabled",
+    "text": "Legacy or insecure services (Telnet, unauthenticated HTTP, etc.) that remain enabled by default on many platforms provide unnecessary attack surface with no corresponding benefit once modern secure alternatives are available."
+  },
+  {
+    "control_id": "no_unused_services",
+    "title": "No Unused Services Enabled",
+    "text": "Services like Finger or BOOTP that are rarely needed in modern networks still consume resources and provide potential reconnaissance/attack vectors if left enabled. Disable any service that is not actively required."
+  },
+  {
+    "control_id": "session_timeout_configured",
+    "title": "Administrative Session Timeout",
+    "text": "An administrative session with no inactivity timeout remains authenticated indefinitely if a workstation is left unattended, giving an opportunistic attacker persistent access. Configure a bounded idle timeout (commonly 10-15 minutes) on all management sessions."
+  }
+]
